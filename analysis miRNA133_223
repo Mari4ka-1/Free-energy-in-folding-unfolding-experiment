@@ -1,0 +1,17 @@
+from numpy import savetxt
+
+import lumicks.pylake as lk
+from pathlib import Path
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from io import StringIO 
+import pylab as plb
+from scipy.optimize import curve_fit
+from scipy import asarray as ar,exp
+
+directory = '//cmcb-files/jahnel_transitions/Mariia/miR133_223/Fd_curve_02_07_23/'
+file_list = list(Path(directory).glob('*.h5'))
+
+directory2 = '//cmcb-files/jahnel_transitions/Mariia/MIR133/'
+file_list2 = list(Path(directory2).glob('*.h5'))
